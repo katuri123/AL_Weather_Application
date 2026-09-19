@@ -1,0 +1,7 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Weather, explained</title><link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"></head>
+<body><main class="card"><p class="eyebrow">CURRENT CONDITIONS</p><h1>Weather, explained.</h1><p class="intro">Get the current weather, then a plain-language explanation of what it means.</p>
+<form id="search-form"><label for="city">City name</label><div class="search"><input id="city" name="city" maxlength="100" placeholder="e.g. Bengaluru, IN" autocomplete="address-level2" required><button>Check weather</button></div></form>
+<p id="message" role="status" aria-live="polite"></p><section id="result" hidden aria-live="polite"><div class="title"><div><p id="place"></p><small id="timestamp"></small></div><span id="condition"></span></div><div class="temperature"><span id="temp"></span><small id="description"></small></div><div class="facts"><div><small>Feels like</small><strong id="feels"></strong></div><div><small>Humidity</small><strong id="humidity"></strong></div><div><small>Wind</small><strong id="wind"></strong></div></div><div class="explanation"><h2>AI explanation</h2><p id="explanation"></p></div><p class="source" id="source"></p></section></main><script src="{{ url_for('static', filename='js/script.js') }}"></script></body>
+</html>
